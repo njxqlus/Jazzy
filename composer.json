@@ -1,0 +1,26 @@
+{
+    "name": "njxqlus/jazzy",
+    "type": "wordpress-muplugin",
+    "version": "1.0",
+    "description": "",
+    "keywords": [
+        "acf",
+        "post"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mikael Agabalyants",
+            "email": "njxqlus@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "ekandreas/bladerunner": "^1.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jazzy\\": "/src"
+        }
+    }
+}
