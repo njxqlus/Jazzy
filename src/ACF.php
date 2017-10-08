@@ -3,6 +3,7 @@
 namespace Jazzy;
 
 class ACF {
+
     private function view($view, $data)
     {
         $viewPath = "acf.$view";
@@ -13,19 +14,30 @@ class ACF {
      * Return field's name with checked type (subfield, option etc)
      * @since 1.0
      * @param string $name
+     * @param bool $post_id
      * @return bool|mixed|null
      */
-    public function get($name)
+    public function get($name, $post_id = false)
     {
+        if ($post_id && $post_id == 'option')
+        {
+            return get_field($name, 'option');
+        } elseif ($post_id && $post_id != 'option')
+        {
+            if (!is_null(get_field($name, $post_id)))
+            {
+                return get_field($name, $post_id);
+            }
+        }
         if (get_sub_field($name) !== false)
         {
             return get_sub_field($name);
         } elseif (!is_null(get_field($name)))
         {
             return get_field($name);
-        } elseif (get_sub_field($name, 'option') !== false)
+        } elseif (get_sub_field($name) !== false)
         {
-            return get_sub_field($name, 'option');
+            return get_sub_field($name);
         } else
         {
             return get_field($name, 'option');
