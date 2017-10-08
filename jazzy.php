@@ -31,3 +31,9 @@ require_once __DIR__ . '/features/plate.php';
  * @since 1.0
  */
 require_once __DIR__ . '/features/soil.php';
+
+/**
+ * ACF Theme options page
+ * @since 1.0.1
+ */
+require_once __DIR__ . '/features/acf-theme-options.php';

@@ -22,3 +22,11 @@ add_action('after_setup_theme',
         add_theme_support('woocommerce');
     }
 );
+
+/**
+ * Theme menus
+ * @since 1.0.1
+ */
+register_nav_menus([
+    'main' => __('Main Menu', 'jazzy'),
+]);

@@ -13,4 +13,9 @@ class Jazzy {
     {
         return new ACF();
     }
+
+    public function kirki()
+    {
+        return new Kirki();
+    }
 }
