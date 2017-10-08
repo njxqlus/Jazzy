@@ -1,7 +1,7 @@
 {
     "name": "njxqlus/jazzy",
     "type": "wordpress-muplugin",
-    "version": "1.0",
+    "version": "1.0.2",
     "description": "",
     "keywords": [
         "acf",
