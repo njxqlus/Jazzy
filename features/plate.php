@@ -66,10 +66,10 @@ add_theme_support('plate-toolbar', [
 //add_theme_support('plate-tabs', ['help', 'screen-options']);
 
 // Set custom permalink structure.
-add_theme_support('plate-permalink', '/%postname%/');
+//add_theme_support('plate-permalink', '/%postname%/');
 
 // Set custom login logo.
-add_theme_support('plate-login', asset('assets/images/logo.png'));
+//add_theme_support('plate-login', asset('assets/images/logo.png'));
 
 // Set custom footer text.
 add_theme_support('plate-footer', 'Thank you for creating with <a href="http://jazzweb.ru">Jazzweb</a>.');
