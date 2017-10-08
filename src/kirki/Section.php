@@ -27,17 +27,18 @@ class Section extends Kirki {
         }
     }
 
-    public function add($name, $title, $priority = 160, $description = false)
+    public function add($name, $title, $description = false, $params = [])
     {
         $this->sectionDecode($name);
         $args = [
             'title'          => __($title, $this->theme_domain),
             'panel'          => $this->panel,
-            'priority'       => $priority,
+            'priority'       => 160,
             'capability'     => 'edit_theme_options',
             'theme_supports' => '',
         ];
         if ($description) $args['description'] = __($description, $this->theme_domain);
+        $args = array_merge($args, $params);
         \Kirki::add_section($this->section, $args);
     }
 }
